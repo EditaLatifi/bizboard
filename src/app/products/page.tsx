@@ -19,7 +19,7 @@ export default function ProductsPage() {
               Get Started Free
             </button>
           </div>
-        <div className="relative w-[600px] h-[400px]">
+        <div className="relative lg:w-[600px] w-full h-[400px]">
   <Image
     src="/image.png"
     alt="..."
@@ -255,6 +255,3 @@ export default function ProductsPage() {
     </main>
   );
 }
-
-
-
