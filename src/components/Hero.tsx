@@ -1,8 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
-import heroImage from "../../public/image.png"; // Replace with real image or GIF
 import { Typewriter } from "react-simple-typewriter";
 
 const phrases = ["Restaurants", "Offices", "Startups", "Bistros", "Cafes"];
@@ -68,16 +66,18 @@ export default function BigHeroFinal() {
         </div>
 
         {/* Hero Image */}
-        <div className="w-full max-w-[600px] transform hover:scale-105 transition duration-500 ease-in-out rounded-2xl shadow-2xl overflow-hidden">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-[400px] object-cover rounded-2xl shadow-2xl"
-            src="/dashboard.mp4"
-          />
-        </div>
+<div className="w-full max-w-[600px] transform hover:scale-105 transition duration-500 ease-in-out rounded-2xl shadow-2xl overflow-hidden">
+  <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="w-full h-[400px] object-cover rounded-2xl shadow-2xl"
+    src="/dashboard.mp4"
+  />
+</div>
+
+
       </div>
 
       {/* Floating Background Blobs */}
