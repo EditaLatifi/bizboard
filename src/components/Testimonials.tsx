@@ -53,7 +53,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="max-w-[1310px] mx-auto px-4 py-24 grid grid-cols-1 lg:grid-cols-2 gap-12">
+    <section className="bg-white max-w-[1310px] mx-auto px-4 py-24 grid grid-cols-1 lg:grid-cols-2 gap-12">
       {/* Left Panel */}
       <div className="lg:sticky top-[100px] self-start space-y-6">
         <p className="text-[#FF6F61] text-lg font-semibold">Testimonials</p>
