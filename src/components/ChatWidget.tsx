@@ -6,24 +6,54 @@ export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<string[]>([]);
   const [input, setInput] = useState("");
+  const [showNotification, setShowNotification] = useState(false);
   const chatEndRef = useRef<HTMLDivElement>(null);
 
-  const toggleChat = () => setIsOpen(!isOpen);
+  const toggleChat = () => setIsOpen((prev) => !prev);
 
   const handleSend = () => {
     const trimmed = input.trim();
     if (!trimmed) return;
     setMessages((prev) => [...prev, trimmed]);
     setInput("");
-    // 👉 Here you can send the message to a backend / ChatGPT
+    // 👉 Send to backend here if needed
   };
 
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
+  useEffect(() => {
+    // Show notification after 3s
+    const timer = setTimeout(() => setShowNotification(true), 2000);
+
+    // Auto-hide after 7s
+    const autoHide = setTimeout(() => setShowNotification(false), 10000);
+
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(autoHide);
+    };
+  }, []);
+
   return (
     <div className="fixed bottom-6 right-6 z-50">
+      {/* Notification */}
+   {/* Notification */}
+{showNotification && !isOpen && (
+  <div
+    className="absolute right-0 bottom-15 bg-white shadow-xl rounded-lg p-4 border border-gray-200 text-sm text-gray-800 max-w-xs w-[260px] animate-fade-slide cursor-pointer"
+    onClick={() => {
+      toggleChat();
+      setShowNotification(false);
+    }}
+  >
+    Want to run smarter? <strong>BizAgent</strong> helps you do more with less.
+  </div>
+)}
+
+
+      {/* Chat Box */}
       {isOpen ? (
         <div className="bg-white shadow-2xl rounded-xl w-80 h-96 flex flex-col border border-gray-200">
           {/* Header */}
