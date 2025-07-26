@@ -50,7 +50,7 @@ export default function Header() {
 
       {/* Mobile Menu Dropdown */}
     {isMobileMenuOpen && (
-  <div className="md:hidden px-4 py-6 bg-white/90 backdrop-blur-md border-t border-gray-200 shadow-md rounded-b-xl">
+  <div className="md:hidden px-4 py-6 bg-white backdrop-blur-md border-t border-gray-200 shadow-md rounded-b-xl">
     <nav className="flex flex-col space-y-4 text-[16px] font-medium text-gray-700">
       {["Home", "Products", "Pricing", "About", "Support", "Contact"].map((text) => (
         <Link
