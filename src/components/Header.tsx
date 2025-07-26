@@ -49,28 +49,39 @@ export default function Header() {
       </div>
 
       {/* Mobile Menu Dropdown */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden px-4 py-6 bg-white border-t border-gray-100 shadow-inner">
-          <nav className="flex flex-col space-y-3 text-[15px] font-medium">
-            <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
-            <Link href="/products" onClick={() => setIsMobileMenuOpen(false)}>Products</Link>
-            <Link href="/pricing" onClick={() => setIsMobileMenuOpen(false)}>Pricing</Link>
-            <Link href="/about" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
-            <Link href="/support" onClick={() => setIsMobileMenuOpen(false)}>Support</Link>
-            <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
-            <Link href="/login" className="flex items-center gap-2 text-gray-700 hover:text-[#1E3A8A]" onClick={() => setIsMobileMenuOpen(false)}>
-              <User size={16} /> Login
-            </Link>
-            <Link
-              href="/start-free-trial"
-              className="bg-[#FF6F61] text-white px-5 py-2 rounded-full shadow-sm hover:bg-[#ff4c3e] transition font-semibold text-center"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Start Free Trial
-            </Link>
-          </nav>
-        </div>
-      )}
+    {isMobileMenuOpen && (
+  <div className="md:hidden px-4 py-6 bg-white/90 backdrop-blur-md border-t border-gray-200 shadow-md rounded-b-xl">
+    <nav className="flex flex-col space-y-4 text-[16px] font-medium text-gray-700">
+      {["Home", "Products", "Pricing", "About", "Support", "Contact"].map((text) => (
+        <Link
+          key={text}
+          href={`/${text.toLowerCase()}`}
+          onClick={() => setIsMobileMenuOpen(false)}
+          className="hover:text-[#1E3A8A] transition"
+        >
+          {text}
+        </Link>
+      ))}
+
+      <Link
+        href="/login"
+        className="flex items-center gap-2 text-gray-700 hover:text-[#1E3A8A] transition"
+        onClick={() => setIsMobileMenuOpen(false)}
+      >
+        <User size={16} /> Login
+      </Link>
+
+      <Link
+        href="/start-free-trial"
+        className="bg-[#FF6F61] text-white text-center mt-4 px-5 py-2 rounded-full shadow-sm hover:bg-[#ff4c3e] transition font-semibold"
+        onClick={() => setIsMobileMenuOpen(false)}
+      >
+        🚀 Start Free Trial
+      </Link>
+    </nav>
+  </div>
+)}
+
     </header>
   );
 }
