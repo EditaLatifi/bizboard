@@ -43,7 +43,7 @@ export default function ContactForm() {
         {/* Contact Info */}
         <div className="space-y-6">
           <h2 className="text-4xl font-extrabold text-[#1E3A8A]">Contact Us</h2>
-          <p className="text-gray-600 text-lg">
+          <p className="text-gray-700 text-lg">
             We’d love to hear from you. Whether you have a question about features, pricing, or just want to say hi.
           </p>
           <div className="space-y-4 text-gray-700 text-md">
@@ -60,7 +60,7 @@ export default function ContactForm() {
         >
           {/* Name */}
           <div>
-            <label className="block text-sm font-medium mb-1">Your Name</label>
+            <label className="block text-sm text-gray-700 font-medium mb-1">Your Name</label>
             <div className="relative">
               <User className="absolute left-3 top-3 text-gray-400 w-5 h-5" />
               <input
@@ -69,14 +69,14 @@ export default function ContactForm() {
                 onChange={handleChange}
                 type="text"
                 placeholder="John Doe"
-                className="pl-10 w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]"
+                className="pl-10 w-full p-3 border text-gray-700 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]"
               />
             </div>
           </div>
 
           {/* Email */}
           <div>
-            <label className="block text-sm font-medium mb-1">Email Address</label>
+            <label className="block text-sm text-gray-700 font-medium mb-1">Email Address</label>
             <div className="relative">
               <Mail className="absolute left-3 top-3 text-gray-400 w-5 h-5" />
               <input
@@ -85,19 +85,19 @@ export default function ContactForm() {
                 onChange={handleChange}
                 type="email"
                 placeholder="you@example.com"
-                className="pl-10 w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]"
+                className="pl-10 w-full p-3 border text-gray-700 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]"
               />
             </div>
           </div>
 
           {/* Subject Dropdown */}
           <div>
-            <label className="block text-sm font-medium mb-1">Subject</label>
+            <label className="block text-sm font-medium mb-1 text-gray-700">Subject</label>
             <select
               name="subject"
               value={form.subject}
               onChange={handleChange}
-              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]"
+              className="w-full p-3 border text-gray-700 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]"
             >
               <option value="">Select a subject</option>
               <option value="General Inquiry">General Inquiry</option>
@@ -109,13 +109,13 @@ export default function ContactForm() {
 
           {/* Message */}
           <div>
-            <label className="block text-sm font-medium mb-1">Your Message</label>
+            <label className="block text-sm text-black font-medium mb-1 text-gray-700">Your Message</label>
             <textarea
               name="message"
               value={form.message}
               onChange={handleChange}
               placeholder="Tell us a little about what you're looking for..."
-              className="w-full p-3 border border-gray-300 rounded-md h-32 resize-none focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]"
+              className="w-full p-3 border border-gray-300 text-gray-700 rounded-md h-32 resize-none focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]"
             />
           </div>
 
