@@ -296,7 +296,7 @@ const services = [
 export default function FeaturesGrid() {
   return (
    <section className="py-20 bg-white max-w-[1310px] mx-auto px-6 text-center">
-  <h2 className="text-4xl font-extrabold text-[#1E3A8A] mb-10 max-w-5xl mx-auto leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold font-raleway text-[#1E3A8A] leading-tight">
     Get data, analytics, CRM apps, and agents.<br />
     All on one deeply integrated platform.
   </h2>
