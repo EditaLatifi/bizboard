@@ -71,7 +71,7 @@ export default function Newsletter() {
         {/* RIGHT: IMAGE */}
         <div className="flex justify-center md:justify-end">
         <video
-  src="/dashboard.mp4" // ✅ Put your actual video path here
+  src="/bizboard-demo.mp4" // ✅ Put your actual video path here
   autoPlay
   muted
   loop
