@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import heroImage from "../../public/image.png"; // Replace with real image or GIF
+import { Typewriter } from "react-simple-typewriter";
 
 const phrases = ["Restaurants", "Offices", "Startups", "Bistros", "Cafes"];
 
@@ -32,13 +33,21 @@ export default function BigHeroFinal() {
           </p>
 
           {/* Main Heading */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold font-clash leading-tight mb-6 tracking-tight">
-            The Smarter Dashboard<br />
-            for{" "}
-            <span className="inline-block animate-fade-in text-[#1E3A8A]">
-              {phrases[index]}
-            </span>
-          </h1>
+<h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold font-clash leading-tight mb-6 tracking-tight">
+  The Smarter Dashboard<br />
+  for{" "}
+  <span className="text-[#1E3A8A]">
+    <Typewriter
+      words={phrases}
+      loop={0} // 0 = infinite loop
+      cursor
+      cursorStyle="|"
+      typeSpeed={90}       // slower typing = more written feel
+      deleteSpeed={60}     // not too fast erase
+      delaySpeed={1500}    // pause before deleting
+    />
+  </span>
+</h1>
 
           {/* Subheading */}
           <p className="text-base sm:text-lg text-gray-700 mb-8 sm:mb-10">
@@ -59,14 +68,16 @@ export default function BigHeroFinal() {
         </div>
 
         {/* Hero Image */}
-       <div className="w-[380px] sm:w-[520px] md:w-[560px] lg:w-[600px] transform hover:scale-105 transition duration-500 ease-in-out">
-  <Image
-    src={heroImage}
-    alt="BizBoard dashboard preview"
-    className="rounded-2xl shadow-2xl w-full h-auto"
-    priority
-  />
-</div>
+        <div className="w-full max-w-[600px] transform hover:scale-105 transition duration-500 ease-in-out rounded-2xl shadow-2xl overflow-hidden">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-[400px] object-cover rounded-2xl shadow-2xl"
+            src="/dashboard.mp4"
+          />
+        </div>
       </div>
 
       {/* Floating Background Blobs */}
