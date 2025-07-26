@@ -66,21 +66,11 @@ export default function BigHeroFinal() {
     priority
   />
 </div>
-
       </div>
 
       {/* Floating Background Blobs */}
       <div className="absolute top-[-100px] left-[-100px] w-[300px] h-[300px] bg-[#1E3A8A]/10 rounded-full blur-3xl animate-pulse" />
       <div className="absolute bottom-[-120px] right-[-80px] w-[250px] h-[250px] bg-[#FF6F61]/10 rounded-full blur-2xl animate-pulse" />
-
-
-      
     </section>
-    
-  );
-}
-
-
-    
   );
 }
