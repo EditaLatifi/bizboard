@@ -1,4 +1,6 @@
 "use client";
+import { Rocket, CheckCircle } from "lucide-react";
+
 import Image from "next/image";
 export default function ProductsPage() {
   return (
@@ -17,9 +19,15 @@ export default function ProductsPage() {
               Get Started Free
             </button>
           </div>
-          <div className="md:w-1/2">
-            <Image src="/image.png" alt="BizBoard Dashboard" className="rounded-xl shadow-xl" />
-          </div>
+        <div className="relative w-[600px] h-[400px]">
+  <Image
+    src="/image.png"
+    alt="..."
+    fill
+    className="object-cover rounded-xl"
+  />
+</div>
+
         </div>
       </section>
 
@@ -84,7 +92,13 @@ export default function ProductsPage() {
     <div className="grid md:grid-cols-3 gap-8">
       {/* Card 1 */}
       <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition text-left">
-        <Image src="/image.png" alt="Self-Service" className="rounded-lg mb-4 w-full" />
+<Image
+  src="/image.png"
+  alt="Field Service"
+  width={600} // ⬅️ adjust as needed
+  height={400} // ⬅️ adjust as needed
+  className="rounded-lg mb-4 w-full h-auto"
+/>
         <h3 className="text-[#1E3A8A] font-bold text-xl mb-2">BizBoard Self-Service</h3>
         <p className="text-gray-700 text-sm mb-4">
           Boost resolution rates and reduce costs using smart AI help centers, 24/7 assistants, and automation flows.
@@ -94,7 +108,13 @@ export default function ProductsPage() {
 
       {/* Card 2 */}
       <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition text-left">
-        <Image src="/image.png" alt="Field Service" className="rounded-lg mb-4 w-full" />
+<Image
+  src="/image.png"
+  alt="Field Service"
+  width={600} // ⬅️ adjust as needed
+  height={400} // ⬅️ adjust as needed
+  className="rounded-lg mb-4 w-full h-auto"
+/>
         <h3 className="text-[#1E3A8A] font-bold text-xl mb-2">Field Team Support</h3>
         <p className="text-gray-700 text-sm mb-4">
           Manage field operations, dispatch tasks, and sync updates in real time with built-in dashboards and templates.
@@ -104,7 +124,13 @@ export default function ProductsPage() {
 
       {/* Card 3 */}
       <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition text-left">
-        <Image src="/image.png" alt="AI Assistant" className="rounded-lg mb-4 w-full" />
+<Image
+  src="/image.png"
+  alt="Field Service"
+  width={600} // ⬅️ adjust as needed
+  height={400} // ⬅️ adjust as needed
+  className="rounded-lg mb-4 w-full h-auto"
+/>
         <h3 className="text-[#1E3A8A] font-bold text-xl mb-2">AI Assistant for Service</h3>
         <p className="text-gray-700 text-sm mb-4">
           Use AI to handle support tickets, respond to common questions, and deliver personalized help backed by CRM data.
@@ -170,35 +196,63 @@ export default function ProductsPage() {
 
 
       {/* Final CTA */}
-      <section className="bg-[#1E3A8A] py-20 px-6 text-center text-white">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Simplify Your Business?</h2>
-        <p className="text-lg mb-6">Start using BizBoard today. No setup fees. No credit card required.</p>
-        <button className="bg-[#FF6F61] hover:bg-[#e65d50] px-6 py-3 rounded-lg shadow transition">
-          Start Free Trial
+       <section className="relative bg-[#1E3A8A] text-white py-24 overflow-hidden">
+      {/* Background Glow */}
+      <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-[#FF6F61]/50 blur-[120px] rounded-full z-0" />
+
+      {/* Radial texture overlay */}
+      <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/10 to-transparent z-0" />
+
+      {/* Content */}
+      <div className="relative max-w-6xl mx-auto px-6 text-center z-10">
+        {/* Label */}
+        <p className="text-[#FF6F61] uppercase text-sm font-semibold tracking-wide mb-4">
+          Let’s Make It Happen
+        </p>
+
+        {/* Icon */}
+        <div className="mb-6 inline-flex items-center justify-center bg-white/10 p-4 rounded-full">
+          <Rocket className="text-white w-8 h-8 animate-pulse" />
+        </div>
+
+        {/* Headline */}
+        <h2 className="text-4xl md:text-5xl font-extrabold leading-tight mb-6 tracking-tight">
+          Empower Your Business with a <br></br>Smarter Dashboard
+        </h2>
+
+        {/* Subheadline */}
+        <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10">
+          Discover how BizBoard transforms your daily workflow — from operations to collaboration — in one beautiful place.
+        </p>
+
+        {/* Benefits */}
+        <div className="flex justify-center gap-4 flex-wrap mb-8 text-sm md:text-base text-white/70">
+          <div className="flex items-center gap-2">
+            <CheckCircle className="w-4 h-4 text-[#22c55e]" />
+            Tailored onboarding
+          </div>
+          <div className="flex items-center gap-2">
+            <CheckCircle className="w-4 h-4 text-[#22c55e]" />
+            One-on-one support
+          </div>
+          <div className="flex items-center gap-2">
+            <CheckCircle className="w-4 h-4 text-[#22c55e]" />
+            Built for teams like yours
+          </div>
+        </div>
+
+        {/* CTA Button */}
+        <button className="bg-white text-[#1E3A8A] text-lg font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-gray-100 transition hover:scale-105">
+          Talk to Our Team
         </button>
-      </section>
+
+        {/* Microcopy */}
+        <p className="text-xs text-white/60 mt-4">
+          Get a live walkthrough. We'll show you how BizBoard fits your business.
+        </p>
+      </div>
+    </section>
     </main>
   );
 }
 
-// Feature Card Component
-function FeatureCard({ icon, title, text }: { icon: React.ReactNode; title: string; text: string }) {
-  return (
-    <div className="bg-[#f9fafb] p-6 rounded-xl shadow hover:shadow-md transition text-left">
-      <div className="mb-3">{icon}</div>
-      <h3 className="text-lg font-semibold text-[#1E3A8A]">{title}</h3>
-      <p className="text-gray-600 text-sm mt-1">{text}</p>
-    </div>
-  );
-}
-
-// Use Case Component
-function UseCase({ emoji, title, desc }: { emoji: string; title: string; desc: string }) {
-  return (
-    <div className="bg-white p-6 rounded-xl shadow hover:shadow-md transition">
-      <div className="text-3xl mb-2">{emoji}</div>
-      <h4 className="font-semibold text-[#1E3A8A]">{title}</h4>
-      <p className="text-gray-600 text-sm mt-1">{desc}</p>
-    </div>
-  );
-}
