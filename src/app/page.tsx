@@ -6,19 +6,21 @@ import Newsletter from "../components/Newsletter";
 import FeaturesGrid from "../components/FeaturesGrid";
 import ChatWidget from '../components/ChatWidget';
 import Faqs from "@/components/Faqs";
+import BizOverview from "@/components/BizOverview";
 export default function HomePage() {
   return (
     <>
       <Hero />
       <AboutUs />
-      <CTASection target="restaurant" />
+      <CTASection />
       <Testimonials />
-      <CTASection target="office" />
+      <BizOverview/>
       <FeaturesGrid />
       {/* Ensure Newsletter is imported and used */}
-      <Faqs />
       <Newsletter /> {/* Add here before Footer */}
       <ChatWidget />
+      <Faqs />
+
     </>
   );
 }
