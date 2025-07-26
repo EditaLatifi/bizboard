@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function BizOverview() {
   return (
-    <section className="w-full bg-white mt-16">
+    <section className="w-full bg-white mt-2">
       <div className="max-w-[1310px] mx-auto px-4 py-20 grid md:grid-cols-2 gap-12 items-center">
         {/* LEFT: TEXT */}
         <div>
