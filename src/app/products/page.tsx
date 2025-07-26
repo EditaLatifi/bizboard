@@ -248,11 +248,13 @@ export default function ProductsPage() {
 
         {/* Microcopy */}
         <p className="text-xs text-white/60 mt-4">
-          Get a live walkthrough. We'll show you how BizBoard fits your business.
+          Get a live walkthrough. We will show you how BizBoard fits your business.
         </p>
       </div>
     </section>
     </main>
   );
 }
+
+
 
