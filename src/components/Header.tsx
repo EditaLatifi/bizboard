@@ -9,7 +9,7 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="w-full bg-white/80 backdrop-blur-sm border-b border-gray-100 sticky top-0 z-50 shadow-md transition">
+    <header className="w-full bg-white backdrop-blur-sm border-b border-gray-100 sticky top-0 z-50 shadow-md transition">
       <div className="max-w-[1310px] mx-auto px-4 py-4 flex justify-between items-center">
 
         {/* Logo */}
@@ -44,13 +44,18 @@ export default function Header() {
           className="md:hidden p-2 rounded-full bg-white shadow-sm border border-gray-200 hover:bg-gray-100 transition"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
-          {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+          {isMobileMenuOpen ? (
+  <X size={20} className="text-black" />
+) : (
+  <Menu size={20} className="text-black" />
+)}
+
         </button>
       </div>
 
       {/* Mobile Menu Dropdown */}
     {isMobileMenuOpen && (
-  <div className="md:hidden px-4 py-6 bg-white backdrop-blur-md border-t border-gray-200 shadow-md rounded-b-xl">
+<div className="md:hidden px-4 py-6 bg-white border-t border-gray-200 shadow-md rounded-b-xl">
     <nav className="flex flex-col space-y-4 text-[16px] font-medium text-gray-700">
       {["Home", "Products", "Pricing", "About", "Support", "Contact"].map((text) => (
         <Link
