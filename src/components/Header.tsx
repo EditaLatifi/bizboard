@@ -13,9 +13,9 @@ export default function Header() {
       <div className="max-w-[1310px] mx-auto px-4 py-4 flex justify-between items-center">
 
         {/* Logo */}
-        <Link href="/" className="text-2xl font-extrabold tracking-tight">
+        <Link href="/" className="text-[28px] font-bold tracking-tight">
           <span className="text-[#1E3A8A]">Biz</span>
-          <span className="text-[#FF6F61]">Board</span>
+          <span className="text-[#1E3A8A]">Board</span>
         </Link>
 
         {/* Desktop Navigation */}
